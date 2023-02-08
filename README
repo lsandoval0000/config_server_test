@@ -1,0 +1,14 @@
+>>>>>>>>>keycloak
+docker run -p 8181:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:20.0.3 start-dev
+
+- registar un nuevo realm
+- dentro del realm, registrar un nuevo usuario que va a emplear autenticacion y es basada en un servicio de cuentas
+
+extraer el issuer dentro de las opciones del realm: endpoints > openid
+
+issuer: http://localhost:8181/realms/spring-boot-microservices-practice-realm
+secret: 45zXC1xPY6arIM48gpXA4Ms48DfRjvU2
+
+
+>>>>>zipkin
+docker run -d -p 9411:9411 openzipkin/zipkin
